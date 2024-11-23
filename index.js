@@ -41,6 +41,7 @@ app.get("/api/privates", async (req, res) => {
 app.patch('/api/update/:id', async (req, res) => {
   const { id } = req.params; // Lấy id từ URLs
   const { status, time } = req.body; // Lấy dữ liệu cập nhật từ body
+  const timeInput = status ? status : null;
   const converIdToNumber = Number.parseInt(id); // Chuyển id sang kiểu số
   try {
     // Cập nhật bản ghi trong bảng `privates` bằng Supabase
