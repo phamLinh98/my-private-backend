@@ -42,15 +42,11 @@ app.patch('/api/update/:id', async (req, res) => {
   const { id } = req.params; // Lấy id từ URLs
   const { status, time } = req.body; // Lấy dữ liệu cập nhật từ body
   const converIdToNumber = Number.parseInt(id); // Chuyển id sang kiểu số
-
-  // Chuyển timeFromBody thành kiểu timestamp hợp lệ
-  const validTime = time ? new Date(time).toISOString() : null;
-
   try {
     // Cập nhật bản ghi trong bảng `privates` bằng Supabase
     const { data, error } = await supabase
       .from("privates")
-      .update({ time: validTime, status: status })
+      .update({ time: time, status: status })
       .eq("id", converIdToNumber)
       .select();
     if (error) {
