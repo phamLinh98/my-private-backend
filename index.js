@@ -19,7 +19,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // API lấy danh sách từ bảng `privates`
-app.get("/api/list", async (req, res) => {
+app.get("/api/privates", async (req, res) => {
   try {
     const { data, error } = await supabase
       .from("privates")
