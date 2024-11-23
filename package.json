@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@supabase/postgrest-js": "^1.17.6",
     "@supabase/supabase-js": "^2.46.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",

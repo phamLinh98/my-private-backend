@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "name": "Debu",
+            "runtimeExecutable": "nodemon",
+            "request": "launch",
+            "restart": true,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/index.js",
+            "env": {
+                "PORT": "3500"
+            }
+        }
+    ]
+}
+// edit lauchjson > typescript debug
+// adding nodemon npm i -g nodemon for global
+// npm ci ? > using current lock json > nodemodule, npm i using newest json > nodemodule
